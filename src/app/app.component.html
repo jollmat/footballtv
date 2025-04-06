@@ -1,4 +1,4 @@
-<div class="w-100 h-100 app-container d-flex">
+<div class="w-100 h-100 app-container d-flex flex-column">
 
     <ng-container *ngIf="scrappingData">
         <div class="d-flex justify-content-center align-items-center w-100 p-5 loader"><i class="fa fa-spinner fa-spin me-2"></i><small>Carregant dades...</small></div>
@@ -7,7 +7,7 @@
     <ng-container *ngIf="!scrappingData && scrappedData">
         <ng-container *ngIf="scrappedDataNodeList && matchDaysAll.length>0">
             <div class="w-100">
-                <table class="table table-hover tableFixedHeader">
+                <table class="table table-hover tableFixedHeader w-100">
                     <thead>
                         <tr>
                             <th class="text-start w-10">
@@ -76,4 +76,6 @@
             <small>No matches found</small>
         </ng-container>
     </ng-container>
+
+    <div class="alert alert-info w-100 br-0 m-0">Prod mode: {{isProd}}</div>
 </div>
