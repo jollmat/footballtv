@@ -20,4 +20,4 @@ BUILD
 
 2 - Desplegar en remot
 
-    npx angular-cli-ghpages – dir=dist
+    npx angular-cli-ghpages –-dir=dist
