@@ -203,6 +203,7 @@ export class AppComponent implements OnInit, OnDestroy {
       }
     });
 
+    this.filterData.competitions.sort();
     this.filterData.teams.sort();
     this.filterData.tvs.sort();
   }
