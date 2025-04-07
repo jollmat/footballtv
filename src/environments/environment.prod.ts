@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  scrapApi: 'http://localhost:3000'
+  scrapApi: 'https://api-web-scrapp.onrender.com'
 };
