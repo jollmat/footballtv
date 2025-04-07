@@ -66,6 +66,7 @@ export class AppComponent implements OnInit, OnDestroy {
       },
       error:(_error) => {
         this.error = _error;
+        this.scrappingData=false;
         this.scrappedData=undefined;
       },
       complete:() => this.scrappingData=false

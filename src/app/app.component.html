@@ -81,5 +81,8 @@
         <div class="alert alert-danger w-100 br-0 m-0">Error: {{error | json}}</div>
     </ng-container>
     
-    <div class="alert alert-info w-100 br-0 m-0">Prod mode: {{isProd}}</div>
+    <ng-container *ngIf="!isProd">
+        <div class="alert alert-warning w-100 br-0 m-0">Dev mode</div>
+    </ng-container>
+    
 </div>
