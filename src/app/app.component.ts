@@ -23,6 +23,8 @@ export class AppComponent implements OnInit, OnDestroy {
   scrappedDataRootNode?: Node;
   scrappedDataNodeList?: (string | Node)[];
 
+  error?: unknown;
+
   matchDaysAll: Matchday[] = [];
   matchDaysFiltered: Matchday[] = [];
 
@@ -46,6 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.scrappingData = true;
     this.scrappedDataSubscription = this.scrapService.scrapUrl('futbolenlatele.com').subscribe({
       next: (_scrappedData) => {
+        this.error = undefined;
         this.scrappedData=_scrappedData;
 
         const scrappedDataHtml: {html: Node} = (this.scrappedData as {html: Node});
@@ -62,6 +65,7 @@ export class AppComponent implements OnInit, OnDestroy {
         }
       },
       error:(_error) => {
+        this.error = _error;
         this.scrappedData=undefined;
       },
       complete:() => this.scrappingData=false
