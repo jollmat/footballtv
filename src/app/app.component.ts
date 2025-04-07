@@ -15,6 +15,9 @@ import { Match } from './model/interfaces/match.interface';
 export class AppComponent implements OnInit, OnDestroy {
   title = 'footballtv';
   isProd = environment.production;
+
+  deviceType?: 'MOBILE' | 'TABLET' | 'DESKTOP';
+
   scrapApiUrl = environment.scrapApi;
 
   scrappingData = true;
@@ -295,9 +298,22 @@ export class AppComponent implements OnInit, OnDestroy {
     }
     return results;
   }
+
+  private checkDeviceType() {
+    const ua = navigator.userAgent;
+    if (/mobile/i.test(ua)) {
+      this.deviceType = 'MOBILE';
+    } else if (/tablet|ipad|playbook|silk/i.test(ua)) {
+      this.deviceType = 'TABLET';
+    } else {
+      this.deviceType = 'DESKTOP';
+    }
+    console.log(this.deviceType);
+  }
   
   ngOnInit(): void {
     this.loadScrappedData();
+    this.checkDeviceType();    
   }
 
   ngOnDestroy(): void {

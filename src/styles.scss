@@ -68,3 +68,14 @@ table {
     &.real_madrid_tv { color: darkslateblue; }
     &.barca_one { background-color: #e66980; color: darkslateblue; }
 }
+
+.matchdate {
+    width:45px;
+}
+.mobile_flag {
+    width: 20px;
+    height: 14px;
+}
+.teams, .tvs {
+    padding-left:45px;
+}
