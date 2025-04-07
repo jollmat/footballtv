@@ -62,7 +62,9 @@
                                         <td class="text-start">{{match.date | date: 'HH:mm'}}</td>
                                         <td class="text-start"><img class="flag me-2" [src]="match.flag" />{{match.competition}}</td>
                                         <td><span class="team">{{match.homeTeam}}</span> vs. <span class="team">{{match.awayTeam}}</span></td>
-                                        <td class="text-start">{{match.tv}}</td>
+                                        <td class="text-start">
+                                            <app-pill-list [items]="match.tv"></app-pill-list>
+                                        </td>
                                         <td class="text-center"><a [href]="match.calendarUrl" target="_blank"><i class="fa fa-calendar"></i></a></td>
                                     </tr>
                                 </ng-container>                                

@@ -9,14 +9,16 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
-import localeCa from '@angular/common/locales/ca';  // Spanish locale data
+import localeCa from '@angular/common/locales/ca';
+import { PillListComponent } from './components/pill-list/pill-list.component';  // Spanish locale data
 
 // Register the French locale
 registerLocaleData(localeCa, 'ca');
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PillListComponent
   ],
   imports: [
     BrowserModule,
