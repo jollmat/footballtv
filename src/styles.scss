@@ -27,8 +27,17 @@ table {
 }
 
 .w-10 { width: 10%; }
+.w-90 { width: 90%; }
 
 .br-0 { border-radius: 0px; }
+
+.page-title-band{
+    background-color: #11787b;
+    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 32px;
+}
 
 .badge {
     display: inline-block;
